@@ -1,3 +1,7 @@
 node_modules/
 .cache/
 .vscode/
+env.js
+workspace.code-workspace
+tests/__snapshots__
+yarn.lock
