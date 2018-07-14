@@ -19747,18 +19747,18 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules\\react-dom\\cjs\\react-dom.development.js"}],"scripts.js":[function(require,module,exports) {
-'use strict';
+},{"./cjs/react-dom.development.js":"node_modules\\react-dom\\cjs\\react-dom.development.js"}],"Components\\Header.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19768,33 +19768,162 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = function (_React$Component) {
-    _inherits(App, _React$Component);
+var Header = function (_React$Component) {
+    _inherits(Header, _React$Component);
 
-    function App() {
-        _classCallCheck(this, App);
+    function Header() {
+        _classCallCheck(this, Header);
 
-        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
     }
 
-    _createClass(App, [{
-        key: 'render',
+    _createClass(Header, [{
+        key: "render",
         value: function render() {
+
             return _react2.default.createElement(
-                'div',
-                null,
-                'Testing'
+                "nav",
+                { className: "navbar navbar-inverse" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "navbar-header" },
+                        _react2.default.createElement(
+                            "button",
+                            { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#navbar", "aria-expanded": "false", "aria-controls": "navbar" },
+                            _react2.default.createElement(
+                                "span",
+                                { className: "sr-only" },
+                                "Toggle navigation"
+                            ),
+                            _react2.default.createElement("span", { className: "icon-bar" }),
+                            _react2.default.createElement("span", { className: "icon-bar" }),
+                            _react2.default.createElement("span", { className: "icon-bar" })
+                        ),
+                        _react2.default.createElement(
+                            "a",
+                            { className: "navbar-brand", href: "#" },
+                            "React Reading List"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { id: "navbar", className: "collapse navbar-collapse" },
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "nav navbar-nav" },
+                            _react2.default.createElement(
+                                "li",
+                                { className: "active" },
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#" },
+                                    "Books"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#about" },
+                                    "Add Book"
+                                )
+                            )
+                        )
+                    )
+                )
             );
         }
     }]);
 
-    return App;
+    return Header;
 }(_react2.default.Component);
 
-;
+exports.default = Header;
+},{"react":"node_modules\\react\\index.js"}],"Components\\Main.jsx":[function(require,module,exports) {
+'use strict';
 
-_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
-},{"react":"node_modules\\react\\index.js","react-dom":"node_modules\\react-dom\\index.js"}],"node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Header = require('./Header.jsx');
+
+var _Header2 = _interopRequireDefault(_Header);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Main = function (_React$Component) {
+    _inherits(Main, _React$Component);
+
+    function Main() {
+        _classCallCheck(this, Main);
+
+        return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+    }
+
+    _createClass(Main, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'site' },
+                _react2.default.createElement(_Header2.default, null),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'container' },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'lead' },
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Main;
+}(_react2.default.Component);
+
+exports.default = Main;
+},{"react":"node_modules\\react\\index.js","./Header.jsx":"Components\\Header.jsx"}],"scripts.js":[function(require,module,exports) {
+'use strict';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Main = require('./Components/Main.jsx');
+
+var _Main2 = _interopRequireDefault(_Main);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('app'));
+},{"react":"node_modules\\react\\index.js","react-dom":"node_modules\\react-dom\\index.js","./Components/Main.jsx":"Components\\Main.jsx"}],"node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -19823,7 +19952,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54542' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55956' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
