@@ -4,16 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "parcel": "parcel index.html", 
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "parcel": "parcel index.html",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^1.9.6"
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^23.4.1",
+    "parcel": "^1.9.6",
+    "react-test-renderer": "^16.4.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.2",
+    "fast-xml-parser": "^3.11.1",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/"
+    ]
   }
 }
